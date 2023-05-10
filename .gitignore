@@ -36,3 +36,5 @@ next-env.d.ts
 
 
 yarn.lock
+.eslintrc.json
+README.md
