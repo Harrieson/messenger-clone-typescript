@@ -1,9 +1,10 @@
 'use client'
 
-import useRoutes from "@/app/hooks/useRoutes"
-import { useState } from "react";
-import DesktopItem from "./DesktopItem";
+import useRoutes from "@/app/hooks/useRoutes";
 import { User } from "@prisma/client";
+import { useState } from "react";
+import Avatar from "../Avatar";
+import DesktopItem from "./DesktopItem";
 
 interface DesktopSidebarPops {
     currentUser: User;
@@ -36,7 +37,7 @@ const DesktopSidebar: React.FC<DesktopSidebarPops> = ({currentUser}) => {
             <nav className="mt-4 flex flex-col justify-between items-center">
                 <div onClick={() => setIsOpen(true)} 
                     className="cursor-pointer hover:opacity-75 transition">
-                        <Avatar />
+                        <Avatar user={currentUser} />
                 </div>
             </nav>               
         </div>
